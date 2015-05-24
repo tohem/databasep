@@ -27,7 +27,7 @@ $sorgula = mysql_query("SELECT * FROM uyeler WHERE id='".$id."'") or die (mysql_
 $uyeler = mysql_fetch_array($sorgula);
 
 
-if($islem=="guncelle")
+if($islem=="duzenle")
 {
 
 ?>
@@ -38,7 +38,7 @@ if($islem=="guncelle")
 <form name="guncelle" method="post" action="uye_duzenle.php?islem=guncelle&id=<?php echo $uyeler['id']; ?>">
 <table align="center" width="300" border="0" cellspacing="2" cellpadding="2">
   <tr>
-    <td height="62"><img src="images/uye.png" width="32" height="32" /> <a href="cikis.php">Çıkış</a></td>
+    <td height="62"><img src="uye.png" width="32" height="32" /> <a href="cikis.php">Çıkış</a></td>
     <td height="62" align="right">&nbsp;</td>
   </tr>
   <tr>

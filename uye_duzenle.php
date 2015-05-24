@@ -51,7 +51,7 @@ $guncelle = mysql_query("Update uyeler Set nick='$g_kullanici_adi', email='$g_ep
 	
 	echo str_repeat("<br>",8)."<center><img src=ok.gif border=0 /> Üye Bilgileri Güncellendi.</center>";
 
-	header("Refresh: 1; url= admin.php");
+	header("Refresh: 2; url= admin.php");
 	return;
 	}
 	else

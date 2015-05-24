@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Üye Yönetim Paneli</title>
+<title>Oyun Yönetim Paneli</title>
 </head>
 <body>
 <?php
@@ -18,7 +18,7 @@ return;
 include("dbbaglan.php");
 
 
-$sql = "select * from uyeler Order By id";
+$sql = "select * from oyunlar Order By id";
 
 $sorgula = mysql_query($sql) or die(mysql_error());
 
@@ -33,24 +33,20 @@ $sorgula = mysql_query($sql) or die(mysql_error());
     </tr>
  <tr>
     <td><b><u>ID</u></b></td>
-    <td><b><u>Kullanıcı Adı</u></b></td>
-    <td><b><u>Parola (Md5)</u></b></td>
-    <td><b><u>E-Posta</u></b></td>
-    <td><b><u>Yetki</u></b></td>
+    <td><b><u>Oyun Adı</u></b></td>
+    <td><b><u>Türü</u></b></td>
+    <td><b><u>Oyun Açıklaması</u></b></td>
   </tr>
-<?php while ($uyeler = mysql_fetch_array($sorgula)){ ?>
+<?php while ($oyunlar = mysql_fetch_array($sorgula)){ ?>
  <tr>
-    <td><?php echo $uyeler['id']; ?></td>
-    <td><?php echo $uyeler['nick']; ?></td>
-    <td><?php echo $uyeler['sifre']; ?></td>
-    <td><?php echo $uyeler['email']; ?></td>
-    <td><?php if($uyeler['yetki'] =='0')
-	echo "Üye";
-	elseif($uyeler['yetki'] =='1')
-	echo "Admin";
-	?></td>
-    <td><a href="uye_duzenle_form.php?islem=duzenle&id=<?php echo $uyeler['id']; ?>">Düzenle</a></td>
-    <td><a href="uye_sil.php?islem=sil&id=<?php echo $uyeler['id']; ?>">Sil</a></td>
+    <td><?php echo $oyunlar['id']; ?></td>
+    <td><?php echo $oyunlar['ad']; ?></td>
+    <td><?php echo $oyunlar['tur']; ?></td>
+    <td><?php echo $oyunlar['bilgi']; ?></td>
+
+	</td>
+    <td><a href="oyunduzenleform.php?islem=duzenle&id=<?php echo $oyunlar['id']; ?>">Düzenle</a></td>
+    <td><a href="oyunsil.php?islem=sil&id=<?php echo $oyunlar['id']; ?>">Sil</a></td>
   </tr>
 <?php } ?>
 

@@ -22,7 +22,7 @@ if($_SESSION['yetki']=='0'){
 ?>
 <br/><br/>
 <a href="cikis.php">ÇIKIŞ</a>|
-<a href="profil.php">PROFİL</a>
+<a href="profil.html">PROFİL</a>
 <?php
 }
 
@@ -30,7 +30,7 @@ else{
 ?>
 <br/><br/>
 <a href="cikis.php">ÇIKIŞ</a>|
-<a href="admin.php">ADMIN PANELİ</a>
+<a href="adminsec.html">ADMIN PANELİ</a>
 <?php
 }
 ?>
