@@ -27,7 +27,7 @@ if($yorum=="" or $puan=="")
 
 else
 {
-	$kontrol=mysql_query("select * from yorum where uyeid_fk='".$_SESSION["id"]."'");
+	$kontrol=mysql_query("select * from yorum where uyeid_fk='".$_SESSION["id"]."' and oyunid_fk='".$oyunid."'");
 	$varmi=mysql_num_rows($kontrol);
 	
 	if($varmi>0)
