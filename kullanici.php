@@ -1,5 +1,6 @@
 <html>
 <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8" />
+<link href="menu.css" type="text/css" rel="stylesheet"/>
 <body>
 
 <?php
@@ -21,16 +22,22 @@ echo 'HOŞGELDİNİZ  SAYIN '. $_SESSION['ad']." " .$_SESSION['soyad'] ;
 if($_SESSION['yetki']=='0'){
 ?>
 <br/><br/>
-<a href="cikis.php">ÇIKIŞ</a>|
-<a href="profil.html">PROFİL</a>
+
+<a  href = "profil.php" target="icerik"> Profil işlemleri için tıklayınız </a></br>
+  <a href = "uyeoyun.php" target="icerik" > Oyunları görüntülemek için tıklayınız </a></br>
+ <a href="cikis.php">ÇIKIŞ</a>
+  
 <?php
 }
 
 else{
 ?>
 <br/><br/>
-<a href="cikis.php">ÇIKIŞ</a>|
-<a href="adminsec.html">ADMIN PANELİ</a>
+
+<a href="admin.php" target="icerik">Üye işlemleri</a>
+<a href="adminoyun.php" target="icerik">Oyun düzenleme işlemleri</a>
+<a href="oyunekleform.php" target="icerik">Oyun ekleme</a>
+<a href="cikis.php">ÇIKIŞ</a>
 <?php
 }
 ?>
